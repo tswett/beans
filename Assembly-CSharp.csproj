@@ -53,6 +53,8 @@
   <ItemGroup>
      <Compile Include="Assets\Airfoil.cs" />
      <Compile Include="Assets\ControlSurface.cs" />
+     <Compile Include="Assets\FollowAero.cs" />
+     <None Include="Assets\ActiveAirfoilShader.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

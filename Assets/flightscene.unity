@@ -303,6 +303,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab93ab4e856be1041bc88c403709ac88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DisplayStalls: 1
+  NormalMaterial: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  StalledMaterial: {fileID: 2100000, guid: 8e3036c5f93b77a4c8c8803e5407d3fb, type: 2}
 --- !u!1 &361762282
 GameObject:
   m_ObjectHideFlags: 0
@@ -462,6 +465,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab93ab4e856be1041bc88c403709ac88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DisplayStalls: 1
+  NormalMaterial: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  StalledMaterial: {fileID: 2100000, guid: 8e3036c5f93b77a4c8c8803e5407d3fb, type: 2}
 --- !u!1 &1161224478
 GameObject:
   m_ObjectHideFlags: 0
@@ -621,6 +627,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab93ab4e856be1041bc88c403709ac88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DisplayStalls: 1
+  NormalMaterial: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  StalledMaterial: {fileID: 2100000, guid: 8e3036c5f93b77a4c8c8803e5407d3fb, type: 2}
 --- !u!1 &1178535799
 GameObject:
   m_ObjectHideFlags: 0
@@ -739,7 +748,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1241938585}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -11.5, y: 12, z: 0}
+  m_LocalPosition: {x: -11.5, y: 10, z: 0}
   m_LocalScale: {x: 4, y: 1, z: 6}
   m_Children: []
   m_Father: {fileID: 1885606465}
@@ -787,7 +796,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.4999925, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.4227941, y: 0.09999829, z: -0.8333335}
+  m_ConnectedAnchor: {x: -0.4227941, y: 0.099998474, z: -0.6111113}
   m_UseSpring: 1
   m_Spring:
     spring: 1000000
@@ -869,6 +878,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab93ab4e856be1041bc88c403709ac88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DisplayStalls: 1
+  NormalMaterial: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  StalledMaterial: {fileID: 2100000, guid: 8e3036c5f93b77a4c8c8803e5407d3fb, type: 2}
 --- !u!1 &1491770415
 GameObject:
   m_ObjectHideFlags: 0
@@ -1140,6 +1152,88 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab93ab4e856be1041bc88c403709ac88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DisplayStalls: 1
+  NormalMaterial: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  StalledMaterial: {fileID: 2100000, guid: 8e3036c5f93b77a4c8c8803e5407d3fb, type: 2}
+--- !u!1 &1712567072
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1712567078}
+  - component: {fileID: 1712567077}
+  - component: {fileID: 1712567073}
+  m_Layer: 0
+  m_Name: Aero Camera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1712567073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1712567072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f8ba5e9fe16fec4db498da61e438938, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TargetObject: {fileID: 352981438}
+  Distance: 50
+--- !u!20 &1712567077
+Camera:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1712567072}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0.8
+    y: 0
+    width: 0.2
+    height: 0.2
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 1
+  orthographic size: 20
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 256
+  m_RenderingPath: 0
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 0
+  m_AllowMSAA: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+  m_StereoMirrorMode: 0
+--- !u!4 &1712567078
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1712567072}
+  m_LocalRotation: {x: -0, y: -0.73325425, z: -0, w: 0.67995465}
+  m_LocalPosition: {x: 35.3, y: 1006.55, z: 0.2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: -94.32001, z: 0}
 --- !u!1 &1824223091
 GameObject:
   m_ObjectHideFlags: 0
@@ -1299,6 +1393,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab93ab4e856be1041bc88c403709ac88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DisplayStalls: 1
+  NormalMaterial: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  StalledMaterial: {fileID: 2100000, guid: 8e3036c5f93b77a4c8c8803e5407d3fb, type: 2}
 --- !u!1 &1871291619
 GameObject:
   m_ObjectHideFlags: 0

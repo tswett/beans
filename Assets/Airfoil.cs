@@ -2,14 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// A script which makes an object behave as an airfoil.
+/// </summary>
+/// <remarks>
+/// Currently, this script assumes that the object is a flat rectangle whose sides are parallel
+/// to its x and z axes.
+/// </remarks>
 public class Airfoil : MonoBehaviour {
+    public bool DisplayStalls;
+    public Material NormalMaterial;
+    public Material StalledMaterial;
     new Rigidbody rigidbody;
     new Collider collider;
+    MeshRenderer meshRenderer;
 
     void Start()
     {
         rigidbody = GetComponent<Rigidbody>();
         collider = GetComponent<Collider>();
+        meshRenderer = GetComponent<MeshRenderer>();
     }
     
     void Update()
@@ -53,10 +65,18 @@ public class Airfoil : MonoBehaviour {
         else
             coefficientOfLift = angleOfAttackDeg / 10.0f;
 
+        if (DisplayStalls && meshRenderer != null)
+        {
+            if (stalled)
+                meshRenderer.material = StalledMaterial;
+            else
+                meshRenderer.material = NormalMaterial;
+        }
+
         bool turbulent = Mathf.Abs(angleOfAttackDeg) > 10.0f;
 
         if (turbulent)
-            coefficientOfDrag = 2.0f * Mathf.Sin(Mathf.Deg2Rad * angleOfAttackDeg);
+            coefficientOfDrag = Mathf.Abs(2.0f * Mathf.Sin(Mathf.Deg2Rad * angleOfAttackDeg));
         else
             coefficientOfDrag = 0.0f;
     }

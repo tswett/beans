@@ -2,11 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// A script which makes a hinge joint controllable, as a control surface.
+/// </summary>
+/// <remarks>
+/// This simply sets the hinge's target position to the coefficient times the control input.
+/// </remarks>
 public class ControlSurface : MonoBehaviour
 {
     public string AxisName;
     public float Coefficient;
-    HingeJoint hingeJoint;
+    new HingeJoint hingeJoint;
 
     void Start()
     {
@@ -17,7 +23,7 @@ public class ControlSurface : MonoBehaviour
     {
         float controlInput = Input.GetAxis(AxisName);
 
-        if (AxisName == "Rudder")
+        if (AxisName == "Aileron")
             Debug.Log(string.Format("Axis {0}, input {1}", AxisName, controlInput));
 
         JointSpring hingeSpring = hingeJoint.spring;
