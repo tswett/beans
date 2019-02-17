@@ -10,6 +10,7 @@ using UnityEngine;
 public class FollowAero : MonoBehaviour {
     public Rigidbody TargetObject;
     public float Distance;
+    public Material ActiveAirfoilMaterial;
 
     void Start()
     {
